@@ -19,3 +19,8 @@ An application that takes an address and interacts with Google Maps and Dark Sky
 
 todoapi:
 A To-Do REST API with User Accounts and Authentication.
+
+chat:
+A real-time chat app to join a chat room, send/receive messages and send your location (Google Maps) to all people in the chat room via a geo-location API.  All people in the room will be notified when someone new enters the room or when someone leaves the room.
+This app is currently up on Heroku => https://boiling-plains-43206.herokuapp.com/
+To try it out get a few people together, go to the Heroku URL,log into a chat room (to test among your group, all will need to enter the same chat room) and send messages and your location.
