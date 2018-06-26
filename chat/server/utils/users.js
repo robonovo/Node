@@ -1,10 +1,5 @@
 [{ }]
 
-// addUser(id, name, room)
-// removeUser(id)
-// getUser(id)
-// getUserList(room)
-
 class Users {
   constructor () {
     this.users = [];
@@ -36,18 +31,3 @@ class Users {
 }
 
 module.exports = {Users};
-
-// class Person {
-//   constructor (name, age) {
-//     this.name = name;
-//     this.age = age;
-//   }
-//   getUserDescription () {
-//     return `${this.name} is ${this.age} year(s) old.`
-//   }
-//
-// }
-//
-// let me = new Person('RoBo', 50);
-// let description = me.getUserDescription();
-// console.log(description);

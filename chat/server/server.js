@@ -17,9 +17,6 @@ let io = socketIO(server);
 let users = new Users();
 
 app.use(express.static(publicPath));
-// app.get('/', (req, res) => {
-//   res.sendFile(publicPath + '/index.html');
-// });
 
 io.on('connection', (socket) => {
   console.log('New user connected');
@@ -32,14 +29,6 @@ io.on('connection', (socket) => {
     socket.join(params.room);
     users.removeUser(socket.id);
     users.addUser(socket.id, params.name, params.room);
-
-    // socket.leave('Node Developers');
-
-    // io.emit = send to everyone connected
-    //   io.to('Node Developer').emit
-    // socket.broadcast.emit = sends to everyne connected EXCEPT the currect user
-    //   socket.broadcast.to('Node Developers').emit
-    // socket.emit = sends to specifically one user
 
     io.to(params.room).emit('updateUserList', users.getUserList(params.room));
     socket.emit('newMessage', generateMessage('Admin', 'Welcome To The Chat app'));
